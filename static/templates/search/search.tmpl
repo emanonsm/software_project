@@ -1,0 +1,67 @@
+{{define "content"}}
+{{template "navbar" .}}
+
+<div style="background-color: #e3f2fd; margin: 1% auto; width: 50%; height: auto;">
+    <div style="text-align: center; font-size: 1.5vw; color: #5b808b;">
+        <h4>{{.Message}}</h4>
+        <hr>
+    </div>
+    {{if .ID}}
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">Идентификатор пациента</th>
+          <td>{{.ID}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Имя</th>
+          <td>{{.Name}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Фамилия</th>
+          <td>{{.Surname}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Отчество</th>
+          <td>{{.Middlename}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Пол</th>
+          <td>{{.Sex}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Номер карты</th>
+          <td>{{.Cart}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Номер полиса</th>
+          <td>{{.Polis}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Документ</th>
+          <td>{{.Document}}</td>
+        </tr>
+        <tr>
+          <th scope="row">СНИЛС</th>
+          <td>{{.Snils}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Возраст</th>
+          <td>{{.Age}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Рост</th>
+          <td>{{.Height}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Вес</th>
+          <td>{{.Weight}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {{end}}
+    <div style="text-align: center;">
+        <button type="submit" class="btn btn-info" style="text-align: center; margin-bottom: 5%;" onclick="window.location.replace('/search/{{.ID}}/visits');">ПОСЕЩЕНИЯ</button>
+    </div>
+</div>
+{{end}}

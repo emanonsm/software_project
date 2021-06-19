@@ -1,0 +1,26 @@
+{{define "navbar"}}
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/" style="font-size: large;">ЭМК</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03" style="font-size: small;">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">ГЛАВНАЯ<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/create/patient">ВНЕСТИ ПАЦИЕНТА</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/create/visit">СОЗДАТЬ ПРИЕМ</a>
+        </li>
+      </ul>
+      <form class="form-inline" style="font-size: 1px;">
+        <input class="form-control mr-sm-2" id="navbar_search_id" type="search" placeholder="ID пациента" aria-label="Search" style="font-size: small;">
+        <input type = "button" value="ПОИСК" class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="font-size: small;" onclick="window.location.replace('/search/' + document.getElementById('navbar_search_id').value);"/>
+      </form>
+    </div>
+  </nav>
+{{end}}

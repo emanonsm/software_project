@@ -1,0 +1,66 @@
+{{define "content"}}
+{{template "navbar" .}}
+
+<div style="background-color: #e3f2fd; margin: 1% auto; width: 50%; height: auto;">
+    <div style="text-align: center; font-size: 1.5vw; color: #5b808b;">
+        <h4>{{.Message}}</h4>
+        <hr>
+    </div>
+    <form method="post" style="padding: 5%; padding-top: 0;">
+      <div class="form-group" style="width: 100%;">
+        <label for="inputName">Имя</label>
+        <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Введите имя">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputSurname">Фамилия</label>
+        <input type="text" name="inputSurname" class="form-control" id="inputSurname" placeholder="Введите фамилию">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputMiddlename">Отчество</label>
+        <input type="text" name="inputMiddlename" class="form-control" id="inputMiddlename" placeholder="Введите отчество">
+      </div>
+      <label for="sex">Пол</label>
+      <div class="form-group" style="width: 100%;">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sex" id="sex1" value="m">
+          <label class="form-check-label" for="sex1">Мужской</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="sex" id="sex2" value="f">
+          <label class="form-check-label" for="sex2">Женский</label>
+        </div>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputCart">Номер карты</label>
+        <input type="number" name="inputCart" class="form-control" id="inputCart" placeholder="Введите номер карты">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputPolis">Номер полиса</label>
+        <input type="number" name="inputPolis" class="form-control" id="inputPolis" placeholder="Введите номер полиса">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputDocument">Документ</label>
+        <input type="number" name="inputDocument" class="form-control" id="inputDocument" placeholder="Введите номер документа">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputSnils">СНИЛС</label>
+        <input type="number" name="inputSnils" class="form-control" id="inputSnils" placeholder="Введите СНИЛС">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputAge">Возраст</label>
+        <input type="number" name="inputAge" class="form-control" id="inputAge" placeholder="Введите возраст">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputHeight">Рост</label>
+        <input type="number" name="inputHeight" class="form-control" id="inputHeight" placeholder="Введите рост">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputWeight">Вес</label>
+        <input type="number" name="inputWeight" class="form-control" id="inputWeight" placeholder="Введите вес">
+      </div>
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-info" style="text-align: center;">СОЗДАТЬ</button>
+      </div>
+    </form>
+</div>
+{{end}}

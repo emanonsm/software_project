@@ -1,0 +1,64 @@
+{{define "content"}}
+{{template "navbar" .}}
+
+<div style="background-color: #e3f2fd; margin: 1% auto; width: 50%; height: auto;">
+    <div style="text-align: center; font-size: 1.5vw; color: #5b808b;">
+        <h4>{{.Message}}</h4>
+        <hr>
+    </div>
+    {{if .Visit}}
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">Идентификатор приема</th>
+          <td>{{.Visit.VisitID}}</td>
+        </tr>
+        <tr>
+           <th scope="row">Время приема</th>
+           <td>{{.Visit.VisitTS}}</td>
+         </tr>
+        <tr>
+          <th scope="row">Идентификатор пациента</th>
+          <td>{{.PatientID}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Лечащий врач</th>
+          <td>{{.Visit.Doctor}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Анамнез</th>
+          <td>{{.Visit.History}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Первичный осмотр</th>
+          <td>{{.Visit.Review}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Состояние пациента</th>
+          <td>{{.Visit.Condition}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Основной диагноз</th>
+          <td>{{.Visit.Diag}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Услуги</th>
+          <td>{{.Visit.Services}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Полученные лекарства</th>
+          <td>{{.Visit.Medicine}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Рецепт</th>
+          <td>{{.Visit.Recipe}}</td>
+        </tr>
+        <tr>
+          <th scope="row">Направление</th>
+          <td>{{.Visit.Recommend}}</td>
+        </tr>
+      </tbody>
+    </table>
+    {{end}}
+</div>
+{{end}}

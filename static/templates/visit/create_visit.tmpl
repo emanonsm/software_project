@@ -1,0 +1,55 @@
+{{define "content"}}
+{{template "navbar" .}}
+
+<div style="background-color: #e3f2fd; margin: 1% auto; width: 50%; height: auto;">
+    <div style="text-align: center; font-size: 1.5vw; color: #5b808b;">
+        <h4>{{.Message}}</h4>
+        <hr>
+    </div>
+    <form method="post" style="padding: 5%; padding-top: 0;">
+      <div class="form-group" style="width: 100%;">
+        <label for="inputDoctor">Лечащий врач</label>
+        <input type="text" name="inputDoctor" class="form-control" id="inputDoctor" placeholder="Введите ФИО лечащего врача">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputID">Идентификатор пациента</label>
+        <input type="number" name="inputID" class="form-control" id="inputID" placeholder="Введите id пациента">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputHistory">Анамнез</label>
+        <textarea class="form-control" name="inputHistory" rows="5" id="inputHistory" placeholder="Введите анамнез пациента"></textarea>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputReview">Первичный осмотр</label>
+        <textarea class="form-control" name="inputReview" rows="5" name="inputReview" id="inputReview" placeholder="Введите данные осмотра"></textarea>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputCondition">Состояние пациента</label>
+        <textarea class="form-control" name="inputCondition" rows="5" id="inputCondition" placeholder="Введите состояние пациента"></textarea>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputDiag">Основной диагноз</label>
+        <input type="text" name="inputDiag" class="form-control" id="inputDiag" placeholder="Введите основной диагноз пациента">
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputServices">Услуги</label>
+        <textarea class="form-control" name="inputServices" rows="5" id="inputServices" placeholder="Введите услуги пациента"></textarea>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputMedicine">Полученные лекарства</label>
+        <textarea class="form-control" name="inputMedicine" rows="5" id="inputMedicine" placeholder="Введите лекарства пациента"></textarea>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputRecipe">Рецепт</label>
+        <textarea class="form-control" name="inputRecipe" rows="5" id="inputRecipe" placeholder="Введите рецепт"></textarea>
+      </div>
+      <div class="form-group" style="width: 100%;">
+        <label for="inputRecommend">Направление</label>
+        <textarea class="form-control" name="inputRecommend" rows="5" id="inputRecommend" placeholder="Введите рекомендации"></textarea>
+      </div>
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-info" style="text-align: center;">СОЗДАТЬ</button>
+      </div>
+    </form>
+</div>
+{{end}}
