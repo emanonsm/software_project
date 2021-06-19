@@ -13,8 +13,8 @@ const (
 	DRIVER     = "postgres"
 	DbHost     = "localhost"
 	DbPort     = 5432
-	DbUser     = "postgres"
-	DbPassword = "postgres"
+	DbUser     = "someuser"
+	DbPassword = "123"
 	DbName     = "testdb"
 )
 
